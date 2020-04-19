@@ -1,0 +1,259 @@
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.6;
+    position: relative;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* NAVBAR */
+.navbar{
+    height: 10%;
+    background-color:rgba(0,0,0,0.8);
+    border-bottom: 1px solid black;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar__logo{
+    font-family: 'Lobster';
+    color: rgb(226, 73, 73);
+    font-size: 3rem;
+}
+
+.navbar__item{
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.navbar__link{
+    display: inline-block;
+    font-size: 2.2rem;
+    color: rgb(226, 73, 73);
+    transition: all 300ms ease;
+}
+
+.navbar__link:hover{
+    transform: scale(1.2);
+}
+
+
+.header{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header__content{
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__title{
+    font-size: 8rem;
+    font-family: 'Lobster',Arial, Helvetica, sans-serif;
+    color:white;
+    line-height: 1;
+}
+
+.header__title::after{
+    content: "";
+    width: 5rem;
+    height: 0.5rem;
+    display: block;
+    background-color: white;
+    margin: 2rem auto;
+
+}
+
+.header__desc{
+    font-size: 2.5rem;
+    color: rgb(245, 245, 245);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    background-color:#ff6961 ;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    text-transform: uppercase;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+
+    transition: all 300ms ease;
+}
+
+.btn:hover{
+    transform: translateY(-1rem) scale(1.2);
+    box-shadow: 0 1rem 4rem rgba(0,0,0,0.6);
+}
+
+.btn:active{
+    transform: translate(0);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+
+/* GALLERy */
+
+.gallery{
+    padding: 15rem 0;
+    background-color: whitesmoke;
+}
+
+.gallery__link{
+    display: block;
+    position: relative;
+    transition: all 300ms ease;
+}
+
+.gallery__link::after{
+    content: url(./img/basic_magnifier_plus.png);
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    filter: invert(1);
+    transition: opacity 400ms ease-in;
+}
+
+.gallery__link:hover .gallery__img{
+    filter: brightness(0.5);
+}
+
+.gallery__link:hover{
+    transform: scale(1.05);
+}
+
+.gallery__link:hover::after{
+    opacity: 1;
+}
+
+.gallery__link:nth-child(5n){
+    grid-column: span 2;
+}
+
+.gallery .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 2rem;
+    grid-auto-flow: dense;
+}
+
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    transform: all 300ms ease;
+}
+
+
+.text-primary{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.text-primary--white{
+    color:white;
+}
+
+
+
+
+
+/* POPUP */
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+
+    transition: all 500ms ease-in;
+}
+
+.popup__container{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.popup__img{
+    width: 100%;
+    height:auto;
+}
+
+.popup__close{
+    position: absolute;
+    top: 1.5rem;
+    right: 5rem;
+    line-height: 1;
+    font-size: 8rem;
+    color:white;
+
+    transition: all 300ms ease;
+}
+
+.popup__close:hover{
+    color: gray;
+}
+
+.popup:target{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.about{
+    padding: 15rem 0;
+    background-image: url(./img/cat\ \(14\).jpg);
+    background-size: cover;
+    background-position: center;
+}
