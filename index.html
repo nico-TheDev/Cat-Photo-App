@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./js/animate.css">
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="queries.css">
+    <link rel="stylesheet" href="queries.css">
+    <script src="./js/all.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -19,6 +20,8 @@
                 <ul class="navbar__list">
                     <li class="navbar__item"><a href="#" class="navbar__link">Gallery</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Facts</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -70,7 +73,7 @@
                 <img src="./img/cat1.jpg" alt="cat photo" class="gallery__img">
             </a>
             <a href="#cat03" class="gallery__link wow fadeInLeft">
-                <img src="./img/cat3.jpg" alt="cat photo" class="gallery__img">
+                <img src="./img/cat3.jpeg" alt="cat photo" class="gallery__img">
             </a>
             <a href="#cat04" class="gallery__link wow fadeInLeft">
                 <img src="./img/cat4.jpg" alt="cat photo" class="gallery__img">
@@ -90,9 +93,12 @@
             <a href="#cat09" class="gallery__link wow fadeInLeft">
                 <img src="./img/cat9.jpg" alt="cat photo" class="gallery__img">
             </a>
-       
-         
+    
         </div>
+
+            <a href="https://www.pexels.com/search/cat/" class="gallery__outside-link btn" target="_blank">
+                Click here to view more cat photos
+            </a>
     </main>
 
     <section class="about">
@@ -100,7 +106,7 @@
         <div class="container">
             <div class="about__content wow fadeInLeft">
                 <div class="about__cover">
-                    <img src="https://bit.ly/fcc-relaxing-cat" alt="" class="about__img">
+                    <img src="https://bit.ly/fcc-relaxing-cat" alt="a cute orange cat lying on its back" class="about__img">
                 </div>
 
                 <div class="about__text">
@@ -112,6 +118,82 @@
             </div>
         </div>
     </section>
+
+    <section class="facts">
+        <h2 class="text-primary u-centered wow fadeInLeft">CAT FACTS</h2>
+        <div class="container">
+            <h3 class="text-primary-2 u-centered wow fadeInLeft">Things cat love 😻</h3>
+            <div class="facts-container">
+                <div class="fact wow flipInY">
+                    <i class="fas fa-leaf fa-8x"></i>
+                    <h4 class="fact__title">Cat nip</h4>
+                </div>
+                <div class="fact wow flipInY">
+                    <i class="fas fa-adjust fa-8x"></i>
+                    <h4 class="fact__title">Laser pointer</h4>
+                </div>
+                <div class="fact wow flipInY">
+                    <i class="fas fa-fish fa-8x"></i>
+                    <h4 class="fact__title">Lasagna</h4>
+                </div>
+            </div>
+
+            <h3 class="text-primary-2 u-centered wow fadeInLeft">Things cat hate 😾</h3>
+
+            <div class="facts-container fact-container--2">
+                <div class="fact wow flipInY">
+                    <i class="fas fa-bug fa-8x"></i>
+                    <h4 class="fact__title">Flea treatment</h4>
+                </div>
+                <div class="fact wow flipInY">
+                    <i class="fas fa-bolt fa-8x"></i>
+                    <h4 class="fact__title">Thunder</h4>
+                </div>
+                <div class="fact wow flipInY">
+                    <i class="fas fa-cat fa-8x"></i>
+                    <h4 class="fact__title">Other cats</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="search">
+        <h3 class="text-primary text-primary--white u-centered wow fadeInLeft">Search for cats</h3>
+        <div class="container">
+            <form action="#" class="search__form wow fadeInLeft">
+                <input type="text" class="search__bar" placeholder="Search for meow...">
+                <i class="fas fa-search fa-5x search__icon"></i>
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__list">
+                <li class="footer__item"><h2 class="navbar__logo">CatPhotoApp</h2></li>
+                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Gallery</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Facts</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Terms of Use</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+            </ul>
+
+            <div class="footer__notes">
+                <h4 class="footer__title text-primary-2">Nico with FCC</h4>
+                <p class="footer__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa corporis maiores nam sequi quaerat est illo, aperiam incidunt deserunt, dicta odit saepe magnam vitae tempore provident quibusdam tempora? Exercitationem, odio.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nisi fuga cum placeat voluptatem aspernatur officiis expedita quia numquam quo!
+                </p>
+                <h4 class="footer__copyright">&copy; All Rights Reserved 2020</h4>
+            </div>
+        </div>
+    </footer>
+
+             <!--  -->
+                    <!--  -->
 
 
     <div class="popup" id="cat3">
@@ -171,7 +253,7 @@
     <div class="popup" id="cat03">
         <div class="popup__container">
             <a href="#gallery" class="popup__close">&times;</a>
-            <img src="./img/cat3.jpg" alt="cat popup" class="popup_img">
+            <img src="./img/cat3.jpeg" alt="cat popup" class="popup_img">
         </div>
     </div>
     <div class="popup" id="cat04">
